@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "webpack serve",
-    "build": "cross-env NODE_ENV=production webpack && mv dist build",
+    "build": "cross-env NODE_ENV=production webpack && rm -rf build && mv dist build && rm -rf dist && cp public/logo.svg build/logo.svg",
     "test": "jest --watchAll",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
