@@ -1,16 +1,14 @@
 section.task-list {
   background: var(--shapes);
   border-radius: 1rem;
-
+  filter: drop-shadow(0px 24px 64px rgba(0, 0, 0, 0.06));
   margin-top: -10rem;
   padding: 70px 60px;
 
-  filter: drop-shadow(0px 24px 64px rgba(0, 0, 0, 0.06));
-
   header {
+    align-items: center;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
 
     h2 {
@@ -19,22 +17,20 @@ section.task-list {
     }
 
     .input-group {
-      display: flex;
-      gap: 0.25rem;
       align-items: center;
-
       background: #fff;
+      display: flex;
       font-size: 16px;
+      gap: 0.25rem;
 
       input {
-        flex: 1;
         background: var(--background);
-        border: 0;
-        color: var(--text);
-        padding: 12px 24px;
-
         border-radius: 8px;
         border: 0;
+        border: 0;
+        color: var(--text);
+        flex: 1;
+        padding: 12px 24px;
 
         &::placeholder {
           color: var(--text-light);
@@ -42,15 +38,14 @@ section.task-list {
       }
 
       button {
-        font-weight: 600;
+        align-items: center;
+        background: var(--green);
         border-radius: 8px;
         border: 0;
-        background: var(--green);
         color: #fff;
         display: flex;
         flex-direction: row;
-        align-items: center;
-
+        font-weight: 600;
         padding: 14px;
         transition: filter 0.2s;
 
@@ -68,41 +63,41 @@ section.task-list {
       list-style: none;
 
       li {
-        display: flex;
-        justify-content: space-between;
         align-items: center;
         border-bottom: 1px solid #ebebeb;
+        display: flex;
+        justify-content: space-between;
         padding: 1rem 0;
 
         div {
-          display: flex;
           align-items: center;
+          display: flex;
           gap: 14px;
           outline: 0;
 
           p {
-            font-size: 1rem;
             color: var(--text);
+            font-size: 1rem;
           }
 
           &.completed {
             p {
-              text-decoration: line-through;
               opacity: 0.6;
+              text-decoration: line-through;
             }
           }
 
           .checkbox-container {
             display: block;
-            position: relative;
-            padding-left: 14px;
             margin-bottom: 18px;
+            padding-left: 14px;
+            position: relative;
 
             input {
-              position: absolute;
-              opacity: 0;
               cursor: pointer;
               height: 0;
+              opacity: 0;
+              position: absolute;
               width: 0;
 
               &:checked {
@@ -117,25 +112,25 @@ section.task-list {
             }
 
             .checkmark {
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 16px;
-              height: 16px;
               background-color: var(--background);
               border-radius: 2px;
+              height: 16px;
+              left: 0;
+              position: absolute;
+              top: 0;
+              width: 16px;
 
               &:after {
-                content: "";
-                position: absolute;
-                display: none;
-                left: 6px;
-                top: 3px;
-                width: 3px;
-                height: 6px;
-                border: solid white;
                 border-width: 0 2px 2px 0;
+                border: solid white;
+                content: "";
+                display: none;
+                height: 6px;
+                left: 6px;
+                position: absolute;
+                top: 3px;
                 transform: rotate(45deg);
+                width: 3px;
               }
             }
           }

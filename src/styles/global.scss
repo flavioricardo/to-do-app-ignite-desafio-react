@@ -1,23 +1,23 @@
 :root {
+  --background: #ebebeb;
   --blue: #273fad;
   --green: #3fad27;
   --red: #ad273f;
-  --background: #ebebeb;
   --shapes: #ffffff;
+  --text-light: #a09cb1;
   --text-title: #3d3d4d;
   --text: #1c1c29;
-  --text-light: #a09cb1;
 }
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  font: 16px "Poppins", Arial, sans-serif;
   color: #121214;
+  font: 16px "Poppins", Arial, sans-serif;
 }
 
 input,
@@ -26,8 +26,8 @@ textarea {
 }
 
 .container {
-  max-width: 1120px;
   margin: 0 auto;
+  max-width: 1120px;
   padding: 2.5rem 1rem;
 }
 
