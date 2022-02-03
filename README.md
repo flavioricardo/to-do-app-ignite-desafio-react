@@ -1,5 +1,7 @@
 ## ReactJS concepts challenge
 
+[![pages-build-deployment](https://github.com/flavioricardo/ignite-desafio-conceitos-do-react/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages)](https://github.com/flavioricardo/ignite-desafio-conceitos-do-react/actions/workflows/pages/pages-build-deployment)
+
 First challenge solution of the ReactJS trail from Ignite course of Rocketseat, written in JavaScript/TypeScript and ReactJS.
 
 ### Installation
