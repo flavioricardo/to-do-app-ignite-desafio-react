@@ -17,3 +17,5 @@ See the acceptance criteria running the application tests:
 ```sh
 yarn test
 ```
+
+Application deployed and running via GitHub Pages, see live at [https://flavioricardo.github.io/ignite-desafio-conceitos-do-react/](https://flavioricardo.github.io/ignite-desafio-conceitos-do-react/)
