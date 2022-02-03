@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../styles/tasklist.scss";
 import { FiTrash, FiCheckSquare } from "react-icons/fi";
+import { useShowFeedbackMessage } from "../utils/useShowFeedbackMessage";
 
 interface Task {
   id: number;
@@ -13,15 +14,32 @@ export function TaskList() {
   const [newTaskTitle, setNewTaskTitle] = useState("");
 
   function handleCreateNewTask() {
-    if (newTaskTitle) {
-      const id = Math.floor(Math.random() * 101);
-      if (!tasks.find((task) => task?.id === id)) {
-        setTasks([
-          ...tasks,
-          { id: id, title: newTaskTitle, isComplete: false },
-        ]);
-        setNewTaskTitle("");
+    try {
+      if (newTaskTitle) {
+        const id = Math.floor(Math.random() * 101);
+        if (!tasks.find((task) => task?.id === id)) {
+          setTasks([
+            ...tasks,
+            { id: id, title: newTaskTitle, isComplete: false },
+          ]);
+          setNewTaskTitle("");
+          useShowFeedbackMessage({
+            type: "success",
+            message: "Task inserida com sucesso!",
+          });
+        }
+      } else {
+        useShowFeedbackMessage({
+          type: "warning",
+          message: "O título da task é obrigatório!",
+        });
       }
+    } catch (error) {
+      console.assert(error);
+      useShowFeedbackMessage({
+        type: "error",
+        message: "Ocorreu um erro ao inserir a task!",
+      });
     }
   }
 
@@ -34,10 +52,22 @@ export function TaskList() {
   }
 
   function handleRemoveTask(id: number) {
-    const index = tasks.findIndex((task) => task.id === id);
-    if (index > -1) {
-      const remaining = tasks.filter((task) => task.id !== id);
-      setTasks(remaining);
+    try {
+      const index = tasks.findIndex((task) => task.id === id);
+      if (index > -1) {
+        const remaining = tasks.filter((task) => task.id !== id);
+        setTasks(remaining);
+        useShowFeedbackMessage({
+          type: "success",
+          message: "Task removida com sucesso!",
+        });
+      }
+    } catch (error) {
+      console.assert(error);
+      useShowFeedbackMessage({
+        type: "error",
+        message: "Ocorreu um erro ao remover a task!",
+      });
     }
   }
 

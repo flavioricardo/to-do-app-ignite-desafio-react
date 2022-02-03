@@ -1,0 +1,36 @@
+.feedback-message {
+  border-radius: 1rem;
+  display: block;
+  filter: drop-shadow(0px 24px 64px rgba(0, 0, 0, 0.06));
+  font-size: 8px;
+  font-weight: lighter;
+  height: auto;
+  margin: 5px 5px 0 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 5px 10px;
+  position: absolute;
+  right: 0;
+  transition: opacity 0.5s linear;
+  top: 0;
+  width: fit-content;
+
+  &.active {
+    opacity: 1;
+  }
+
+  &.error {
+    background-color: var(--red);
+    color: var(--white);
+  }
+
+  &.success {
+    background-color: var(--green);
+    color: var(--white);
+  }
+
+  &.warning {
+    background-color: var(--yellow);
+    color: var(--text-title);
+  }
+}

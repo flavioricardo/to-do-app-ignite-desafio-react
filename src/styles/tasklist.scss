@@ -1,5 +1,5 @@
 section.task-list {
-  background: var(--shapes);
+  background: var(--white);
   border-radius: 1rem;
   filter: drop-shadow(0px 24px 64px rgba(0, 0, 0, 0.06));
   margin-top: -10rem;
@@ -18,7 +18,7 @@ section.task-list {
 
     .input-group {
       align-items: center;
-      background: #fff;
+      background: var(--white);
       display: flex;
       font-size: 16px;
       gap: 0.25rem;
@@ -42,7 +42,7 @@ section.task-list {
         background: var(--green);
         border-radius: 8px;
         border: 0;
-        color: #fff;
+        color: var(--white);
         display: flex;
         flex-direction: row;
         font-weight: 600;
@@ -64,7 +64,7 @@ section.task-list {
 
       li {
         align-items: center;
-        border-bottom: 1px solid #ebebeb;
+        border-bottom: 1px solid var(--background);
         display: flex;
         justify-content: space-between;
         padding: 1rem 0;
@@ -121,16 +121,16 @@ section.task-list {
               width: 16px;
 
               &:after {
-                border-width: 0 2px 2px 0;
-                border: solid white;
                 content: "";
-                display: none;
-                height: 6px;
-                left: 6px;
                 position: absolute;
+                display: none;
+                left: 6px;
                 top: 3px;
-                transform: rotate(45deg);
                 width: 3px;
+                height: 6px;
+                border: solid var(--white);
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
               }
             }
           }
